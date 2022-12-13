@@ -21,7 +21,7 @@ resource "aws_instance" "node" {
   key_name               = aws_key_pair.key_pair.id
   vpc_security_group_ids = [aws_security_group.secgroup.id]
   subnet_id              = "subnet-0aa074e92c6843434"
-
+  associate_public_ip_address = "true"
 
   root_block_device {
     volume_size = 10
